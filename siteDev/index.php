@@ -2,6 +2,7 @@
 	include 'indexHelper.php';
 	if (isset($_POST['campaign_name'])){
 		myFunction($_POST['campaign_name'],$_POST['start-date']);
+		header('Location:workflow.php');
 	}
 ?>
 <!DOCTYPE html>
@@ -225,57 +226,6 @@
 
 			<hr class="big">
 
-
-		<div class="container xxx" id="create-workflow">
-				<hr class="big">
-			<h3 id="workflow-title">Create a Workflow</h3>
-			<input class="rounded form-control" id="workflow-name" type="text" placeholder="Workflow Name">
-
-			<hr class="big">
-
-			<div id="workflow-stages">
-				<div class="form-group">
-					<span class="oi oi-grid-four-up"></span>
-					</div>
-					<div class="form-group">
-						<label for="stage-name">Stage Name</label>
-					  	<input class="rounded form-control" type="text" name="stage-name">
-					</div>
-					<div class="form-group">
-						<label for="stage-name">Stage Task</label>
-					  	<input class="rounded form-control" type="text" name="stage-name" placeholder="ex. Outline | Write | Edit">
-					</div>
-					<div class="form-group">
-				  		<label for="sel3">Stage User</label>
-					  <select class="form-control" id="sel3">
-					    <option>---</option>
-					    <option>Writer</option>
-					    <option>Editor</option>
-					    <option>Strategist</option>
-					    <option>Client</option>
-					    <option>SEO Specialist</option>
-					  </select>
-					</div>
-					<div class="form-group">
-				  		<label for="sel4">Stage Duration</label>
-					  <select class="form-control" id="sel4">
-					    <option>---</option>
-					    <option>1 Day</option>
-					    <option>2 Days</option>
-					    <option>3 Days</option>
-					    <option>4 Days</option>
-					    <option>5 Days</option>
-					    <option>6 Days</option>
-					    <option>1 Week</option>
-					  </select>
-					</div>
-					<div class="form-group">
-						<button class="btn btn-dark add-row"><i class="fa fa-plus-circle"></i></button>
-					</div>
-			</div>
-
-		</div>
-		</div>
 
 		<script type="text/javascript">
 			var campaignName = document.getElementById('campaign-name');
