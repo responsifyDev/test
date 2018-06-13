@@ -1,7 +1,8 @@
 <?php
 	include 'indexHelper.php';
 	if (isset($_POST['campaign_name'])){
-		myFunction($_POST['campaign-name']);
+		echo $_POST['start_date'];
+		myFunction($_POST['campaign_name']);
 	}
 ?>
 <!DOCTYPE html>
