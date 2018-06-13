@@ -1,3 +1,9 @@
+<?php
+	include 'indexHelper.php';
+	if (isset($_POST['campaign_name'])){
+		myFunction($_POST['campaign_name'],$_POST['start-date']);
+	}
+?>
 <!DOCTYPE html>
 <html>
 	<head>
@@ -32,7 +38,7 @@
 				margin-right: 15%;
 				margin-top: 33px;
 				margin-bottom: 33px; 
-			}
+			}d
 
 			.xxx {
 				display: flex;
@@ -76,7 +82,8 @@
 		<div class="container-fluid">
 			<div class="container xxx" id="campaign-launch">
 				<h3>Campaign Launch Form</h3>
-				<input class="rounded form-control" id="campaign-name" type="text" placeholder="Campaign Name">
+				<form method="POST">
+				<input class="rounded form-control" id="campaign-name" type="text" name="campaign_name" placeholder="Campaign Name">
 
 				<hr class="big">
 				
@@ -162,8 +169,8 @@
 
 				<hr class="big">
 
-				<button class="btn btn-dark" type="submit" id=launch-button>Launch Campaign</button>
-
+				<input class="btn btn-dark" type="submit" id=launch-button value="Launch Campaign">
+				</form>
 				<hr class="big">
 
 			</div>
@@ -258,12 +265,6 @@
 			addRow.onclick = function() {
 				console.log(addRow.value)
 				content.innerHTML += contentRow;
-			}
-
-			completeCampaign.onClick = function(){
-				var xhttp = new XMLHTTPRequest();
-				xhttp.open("POST","indexHelper.php?q="+campaignName.text(),true);
-				xhttp.send();
 			}
 
 			
