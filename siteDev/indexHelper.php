@@ -1,6 +1,5 @@
 <?php
-	function myFunction($varName){
-		print_r($varDate);
+	function myFunction($varName, $varDate){
 		$servername = "dbserver.dev.c34902fe-4f3b-4299-957b-1310e0d392e7.drush.in";
 		$username = "pantheon";
 		$password = "4f4db03a6f164837ab954a3f6aa62fa1";
@@ -16,6 +15,11 @@
 		$conn->query($sql);
 		$sql = "UPDATE campaign SET campaign_name ='".$varName. "'WHERE campaign_id = (SELECT MAX(campaign_id)) AND campaign_name ='' ";
 		$conn->query($sql);
-		$sql = "UPDATE company SET start_date = NOW() WHERE company_name  = '". $varName."'";
+		$varDate = strtotime($varDate);
+		$day1 = date('Y-m-d', $varDate);
+		//print_r($day_1);
+		$sql = "UPDATE campaign SET start_date ='" . $day1 . "' WHERE campaign_name  = '". $varName."'";
+		//print_r($sql);
+		$conn->query($sql);
 	}
 ?>
