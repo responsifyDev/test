@@ -38,7 +38,7 @@
 				margin-right: 15%;
 				margin-top: 33px;
 				margin-bottom: 33px; 
-			}d
+			}
 
 			.xxx {
 				display: flex;
