@@ -91,7 +91,7 @@
 				<div id="roles">
 					<div class="form-group roles">
 					<label for="sel1">Writer:</label>
-					  <select class="form-control" id="sel1">
+					  <select class="form-control" id="sel1" name="sel1">
 					    <option>---</option>
 					    <?php
 					    	$servername = "dbserver.htoo.0ba90e11-ca2f-49e5-82f7-6f2b1b200e3f.drush.in";
@@ -102,14 +102,14 @@
 							$sql = "SELECT user_nicename FROM wp_users";
 							$result = $conn->query($sql);
 							while ($row = $result->fetch_assoc()){
-								echo "<option value=\"owner1\">" . $row['user_nicename'] . "</option>";
+								echo "<option value=\"".$row['user_nicename']."\">" . $row['user_nicename'] . "</option>";
 							}
 					    ?>
 					  </select>
 					</div>
 					<div class="form-group roles">
 				  	<label for="sel2">Editor:</label>
-					  <select class="form-control" id="sel2">
+					  <select class="form-control" id="sel2" name="sel2">
 					    <option>---</option>
 					    <?php
 					    	$servername = "dbserver.htoo.0ba90e11-ca2f-49e5-82f7-6f2b1b200e3f.drush.in";
@@ -119,15 +119,16 @@
 							$conn = new mysqli($servername,$username,$password,$dbname,16681);
 							$sql = "SELECT user_nicename FROM wp_users";
 							$result = $conn->query($sql);
+							$counter = 1;
 							while ($row = $result->fetch_assoc()){
-								echo "<option value=\"owner1\">" . $row['user_nicename'] . "</option>";
+								echo "<option value=\"".$row['user_nicename']."\">" . $row['user_nicename'] . "</option>";
 							}
 					    ?>
 					  </select>
 					</div>
 					<div class="form-group roles">
 				  		<label for="sel3">Strategist:</label>
-					  <select class="form-control" id="sel3">
+					  <select class="form-control" id="sel3" name="sel3">
 					    <option>---</option>
 					    <?php
 					    	$servername = "dbserver.htoo.0ba90e11-ca2f-49e5-82f7-6f2b1b200e3f.drush.in";
@@ -138,14 +139,14 @@
 							$sql = "SELECT user_nicename FROM wp_users";
 							$result = $conn->query($sql);
 							while ($row = $result->fetch_assoc()){
-								echo "<option value=\"owner1\">" . $row['user_nicename'] . "</option>";
+								echo "<option value=\"".$row['user_nicename']."\">" . $row['user_nicename'] . "</option>";
 							}
 					    ?>
 					  </select>
 					</div>
 					<div class="form-group roles">
 				  		<label for="sel4">Designer:</label>
-					  <select class="form-control" id="sel4">
+					  <select class="form-control" id="sel4" name="sel4">
 					    <option>---</option>
 					    <?php
 					    	$servername = "dbserver.htoo.0ba90e11-ca2f-49e5-82f7-6f2b1b200e3f.drush.in";
@@ -156,14 +157,14 @@
 							$sql = "SELECT user_nicename FROM wp_users";
 							$result = $conn->query($sql);
 							while ($row = $result->fetch_assoc()){
-								echo "<option value=\"owner1\">" . $row['user_nicename'] . "</option>";
+								echo "<option value=\"".$row['user_nicename']."\">" . $row['user_nicename'] . "</option>";
 							}
 					    ?>
 					  </select>
 					</div>
 					<div class="form-group roles">
 				  		<label for="sel5">SEO Specialist:</label>
-					  <select class="form-control" id="sel5">
+					  <select class="form-control" id="sel5" name="sel5">
 					    <option>---</option>
 					    <?php
 					    	$servername = "dbserver.htoo.0ba90e11-ca2f-49e5-82f7-6f2b1b200e3f.drush.in";
@@ -174,7 +175,7 @@
 							$sql = "SELECT user_nicename FROM wp_users";
 							$result = $conn->query($sql);
 							while ($row = $result->fetch_assoc()){
-								echo "<option value=\"owner1\">" . $row['user_nicename'] . "</option>";
+								echo "<option value=\"".$row['user_nicename']."\">" . $row['user_nicename'] . "</option>";
 							}
 					    ?>
 					  </select>
@@ -222,27 +223,7 @@
 
 
 
-
-
-
-
-
-
-
-
 			<hr class="big">
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 		<div class="container xxx" id="create-workflow">

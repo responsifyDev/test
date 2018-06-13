@@ -2,6 +2,9 @@
 	include 'helper.php';
 	if (isset($_POST['company_name'])){
 		//print_r($_POST['company_name']);
+		$cookie_name = "comp_name";
+		$cookie_value = $_POST['company_name'];
+		setcookie($cookie_name,$cookie_value);
 		myFunction($_POST['company_name']);
 		header('Location:publicationPage.php');
 	}

@@ -4,8 +4,6 @@
 		$username = "pantheon";
 		$password = "e8e1abad4d2e41ef8e163f516aee563a";
 		$dbname = "pantheon";
-
-
 		$conn = new mysqli($servername,$username,$password,$dbname,16681);
 
 		if ($conn->connect_error){
@@ -30,14 +28,12 @@
 		$username = "pantheon";
 		$password = "e8e1abad4d2e41ef8e163f516aee563a";
 		$dbname = "pantheon";
-
 		$conn = new mysqli($servername,$username,$password,$dbname,16681);
-
 		if ($conn->connect_error){
 			echo "HELP ME";
 			die("Connection failed: " . $conn->connect_error);
 		}
-		$sql = "INSERT INTO campaign (pub_id) SELECT DISTINCT pub_id FROM publication WHERE pub_name = 'Whole Milk'";
+		$sql = "INSERT INTO campaign (pub_id) SELECT DISTINCT pub_id FROM publication WHERE pub_name = '" . $_COOKIE['pub_name'] . "'"; //This will have to change according to session variable!!!!
 		$conn->query($sql);
 		$sql = "UPDATE campaign SET campaign_name ='".$varName. "'WHERE campaign_id = (SELECT MAX(campaign_id)) AND campaign_name ='' ";
 		$conn->query($sql);
