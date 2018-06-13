@@ -1,11 +1,10 @@
 <?php
 	function myFunction($varName){
-		$servername = "dbserver.dev.c34902fe-4f3b-4299-957b-1310e0d392e7.drush.in";
+		$servername = "dbserver.htoo.0ba90e11-ca2f-49e5-82f7-6f2b1b200e3f.drush.in";
 		$username = "pantheon";
-		$password = "4f4db03a6f164837ab954a3f6aa62fa1";
-		$dbname = "sandbox";
-
-		$conn = new mysqli($servername,$username,$password,$dbname,15333);
+		$password = "e8e1abad4d2e41ef8e163f516aee563a";
+		$dbname = "pantheon";
+		$conn = new mysqli($servername,$username,$password,$dbname,16681);
 
 		if ($conn->connect_error){
 			echo "HELP ME";
