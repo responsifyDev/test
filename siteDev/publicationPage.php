@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <html>
 <main>
-	<h1> HI MY NAMES BARRY ALLEN AND IM THE FASTEST MAN ALIVE </h1>
+	<script>
+		var xhr = new XMLHttpRequest();
+		console.log("AHHH");
+	</script>
 </main>
 </html>
