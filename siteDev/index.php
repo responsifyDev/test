@@ -93,45 +93,90 @@
 					<label for="sel1">Writer:</label>
 					  <select class="form-control" id="sel1">
 					    <option>---</option>
-					    <option>Edmund Zaloga</option>
-					    <option>Michael Weitzenhoffer</option>
-					    <option>Htoo Min</option>
+					    <?php
+					    	$servername = "dbserver.htoo.0ba90e11-ca2f-49e5-82f7-6f2b1b200e3f.drush.in";
+							$username = "pantheon";
+							$password = "e8e1abad4d2e41ef8e163f516aee563a";
+							$dbname = "pantheon";
+							$conn = new mysqli($servername,$username,$password,$dbname,16681);
+							$sql = "SELECT user_nicename FROM wp_users";
+							$result = $conn->query($sql);
+							while ($row = $result->fetch_assoc()){
+								echo "<option value=\"owner1\">" . $row['user_nicename'] . "</option>";
+							}
+					    ?>
 					  </select>
 					</div>
 					<div class="form-group roles">
 				  	<label for="sel2">Editor:</label>
 					  <select class="form-control" id="sel2">
 					    <option>---</option>
-					    <option>Edmund Zaloga</option>
-					    <option>Michael Weitzenhoffer</option>
-					    <option>Htoo Min</option>
+					    <?php
+					    	$servername = "dbserver.htoo.0ba90e11-ca2f-49e5-82f7-6f2b1b200e3f.drush.in";
+							$username = "pantheon";
+							$password = "e8e1abad4d2e41ef8e163f516aee563a";
+							$dbname = "pantheon";
+							$conn = new mysqli($servername,$username,$password,$dbname,16681);
+							$sql = "SELECT user_nicename FROM wp_users";
+							$result = $conn->query($sql);
+							while ($row = $result->fetch_assoc()){
+								echo "<option value=\"owner1\">" . $row['user_nicename'] . "</option>";
+							}
+					    ?>
 					  </select>
 					</div>
 					<div class="form-group roles">
 				  		<label for="sel3">Strategist:</label>
 					  <select class="form-control" id="sel3">
 					    <option>---</option>
-					    <option>Edmund Zaloga</option>
-					    <option>Michael Weitzenhoffer</option>
-					    <option>Htoo Min</option>
+					    <?php
+					    	$servername = "dbserver.htoo.0ba90e11-ca2f-49e5-82f7-6f2b1b200e3f.drush.in";
+							$username = "pantheon";
+							$password = "e8e1abad4d2e41ef8e163f516aee563a";
+							$dbname = "pantheon";
+							$conn = new mysqli($servername,$username,$password,$dbname,16681);
+							$sql = "SELECT user_nicename FROM wp_users";
+							$result = $conn->query($sql);
+							while ($row = $result->fetch_assoc()){
+								echo "<option value=\"owner1\">" . $row['user_nicename'] . "</option>";
+							}
+					    ?>
 					  </select>
 					</div>
 					<div class="form-group roles">
 				  		<label for="sel4">Designer:</label>
 					  <select class="form-control" id="sel4">
 					    <option>---</option>
-					    <option>Edmund Zaloga</option>
-					    <option>Michael Weitzenhoffer</option>
-					    <option>Htoo Min</option>
+					    <?php
+					    	$servername = "dbserver.htoo.0ba90e11-ca2f-49e5-82f7-6f2b1b200e3f.drush.in";
+							$username = "pantheon";
+							$password = "e8e1abad4d2e41ef8e163f516aee563a";
+							$dbname = "pantheon";
+							$conn = new mysqli($servername,$username,$password,$dbname,16681);
+							$sql = "SELECT user_nicename FROM wp_users";
+							$result = $conn->query($sql);
+							while ($row = $result->fetch_assoc()){
+								echo "<option value=\"owner1\">" . $row['user_nicename'] . "</option>";
+							}
+					    ?>
 					  </select>
 					</div>
 					<div class="form-group roles">
 				  		<label for="sel5">SEO Specialist:</label>
 					  <select class="form-control" id="sel5">
 					    <option>---</option>
-					    <option>Edmund Zaloga</option>
-					    <option>Michael Weitzenhoffer</option>
-					    <option>Htoo Min</option>
+					    <?php
+					    	$servername = "dbserver.htoo.0ba90e11-ca2f-49e5-82f7-6f2b1b200e3f.drush.in";
+							$username = "pantheon";
+							$password = "e8e1abad4d2e41ef8e163f516aee563a";
+							$dbname = "pantheon";
+							$conn = new mysqli($servername,$username,$password,$dbname,16681);
+							$sql = "SELECT user_nicename FROM wp_users";
+							$result = $conn->query($sql);
+							while ($row = $result->fetch_assoc()){
+								echo "<option value=\"owner1\">" . $row['user_nicename'] . "</option>";
+							}
+					    ?>
 					  </select>
 					</div>
 					<div class="form-group roles">
@@ -254,7 +299,6 @@
 		<script type="text/javascript">
 			var campaignName = document.getElementById('campaign-name');
 			var addRow = document.getElementById('add-content');
-			var completeCampaign = document.getElementById('launch-button');
 			var content = document.getElementById('content-container');
 			var contentRow = "<div class='content-row'> <div class='main-title-row'> <div class='form-group'> <label>Title</label> <input class='form-control' type='text'> </div> <div class='form-group'> <label for='content-type'>Content Type</label> <select class='form-control' id='sel5'> <option>Blog Post</option> <option>eBook</option> </select> </div> <div class='form-group'> <button class='btn btn-dark add-row' id='add-content' value=1><i class='fa fa-plus-circle'></i></button> </div> </div> </div>"
 
